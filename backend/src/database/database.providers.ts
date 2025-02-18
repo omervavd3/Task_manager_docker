@@ -10,10 +10,10 @@ export const databaseProviders = [
       const dataSource = new DataSource({
         type: 'postgres',
         host: process.env.DB_HOST || 'localhost',
-        port: 5432,
-        username: 'postgres',
-        password: '01051998',
-        database: 'task-manager',
+        port: Number(process.env.DB_PORT) || 5432,
+        username: process.env.DB_USER || 'postgres',
+        password: process.env.DB_PASSWORD || '01051998',
+        database: process.env.DB_NAME || 'task-manager',
         entities: [User, Task],
         synchronize: true, //only for development*******
       });
