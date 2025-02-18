@@ -151,6 +151,7 @@ const UserPage = () => {
         console.error(error);
         handleAlert("Error deleting account", "danger");
       });
+      setLoading(false);
   };
 
   return (
