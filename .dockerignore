@@ -1,0 +1,19 @@
+# Ignore Node.js dependencies
+node_modules/
+
+# Ignore local configuration files (e.g., editor settings)
+.vscode/
+
+# Ignore environment files
+*.env
+
+# Ignore Dockerfiles if you have multiple or for better clarity
+Dockerfile*
+
+# Ignore build artifacts and other unnecessary files
+dist/
+*.log
+
+# Ignore git-related files
+.git/
+.gitignore
