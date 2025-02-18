@@ -1,0 +1,86 @@
+GET http://localhost:3000/user/?name=Guy
+
+###
+
+GET http://localhost:3000/user
+
+###
+
+POST http://localhost:3000/user/register
+Content-Type: application/json
+
+{
+    "name": "Guy",
+    "email": "example@email.com",
+    "password": "1234"
+}
+
+###
+
+POST http://localhost:3000/user/login
+Content-Type: application/json
+
+{
+    "email": "example@email.com",
+    "password": "1234"
+}
+
+###
+
+GET http://localhost:3000/auth/me
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYsImVtYWlsIjoiZXhhbXBsZUBlbWFpbC5jb20iLCJpYXQiOjE3Mzk1NDYxMzR9.lkmnzdn1BCXOxG6BdD3e6-c_X4XBaqciJLFhA03C6ho
+
+###
+
+POST http://localhost:3000/user/logout
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYsImVtYWlsIjoiZXhhbXBsZUBlbWFpbC5jb20iLCJpYXQiOjE3Mzk1NDM5OTZ9.VOLuKBWmKtwQF2xFYYn6nISGavChDlV-lCMdtRxiX_c
+
+###
+
+DELETE http://localhost:3000/user/delete
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYsImVtYWlsIjoiZXhhbXBsZUBlbWFpbC5jb20iLCJpYXQiOjE3Mzk1NDM5OTZ9.VOLuKBWmKtwQF2xFYYn6nISGavChDlV-lCMdtRxiX_c
+
+###
+PATCH http://localhost:3000/user/16
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYsImVtYWlsIjoiZXhhbXBsZUBlbWFpbC5jb20iLCJpYXQiOjE3Mzk1NDYxMzR9.lkmnzdn1BCXOxG6BdD3e6-c_X4XBaqciJLFhA03C6ho
+Content-Type: application/json
+
+{
+    "name": "Guy Vir"
+}
+
+###
+//Task
+GET http://localhost:3000/task
+
+###
+
+GET http://localhost:3000/task/1
+
+###
+
+POST http://localhost:3000/task
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsImVtYWlsIjoib21lcnZhdmQzQGdtYWlsLmNvbSIsImlhdCI6MTczOTY0NTAxNX0.Q3ZF7HAYm5VPo7AjmtRMsGzBP9tZYYkpeCDwozX568M
+Content-Type: application/json
+
+{
+    "title": "Task 1Test 222",
+    "description": "Task Test 222 description",
+    "isComplete": false,
+    "date": "2021-09-01"
+}
+
+###
+PATCH http://localhost:3000/task/5
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYsImVtYWlsIjoiZXhhbXBsZUBlbWFpbC5jb20iLCJpYXQiOjE3Mzk1NDY0MDF9.78l4SIEPvwUdHE4OMBuhP2K41XiV8TWhb9oVz0d_368
+
+{
+    "isComplete": true
+}
+
+###
+DELETE http://localhost:3000/task/5
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYsImVtYWlsIjoiZXhhbXBsZUBlbWFpbC5jb20iLCJpYXQiOjE3Mzk1NDY0MDF9.78l4SIEPvwUdHE4OMBuhP2K41XiV8TWhb9oVz0d_368
+###
+
+
