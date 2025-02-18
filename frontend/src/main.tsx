@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import HomePage from "./components/HomePage";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
+import Auth from "./components/Auth";
 import UserPage from "./components/userPage";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
@@ -10,14 +11,14 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <Routes>
       <Route path="/" element={<HomePage />} />
 
-      <Route path="login" element={<Login />} />
+      <Route path="/login" element={<Login />} />
 
-      <Route path="signup" element={<SignUp />} />
+      <Route path="/signup" element={<SignUp />} />
 
-      <Route path="user/:userId" element={<UserPage />} />
+      <Route path="/user/:userId" element={<UserPage />} />
 
 
-      <Route path="*" element={<div>Not Found</div>} />
+      <Route path="*" element={<Auth />} />
     </Routes>
   </BrowserRouter>
 );

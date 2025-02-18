@@ -24,7 +24,7 @@ services:
     restart: always
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 01051998
+      POSTGRES_PASSWORD: '01051998'
       POSTGRES_DB: task-manager
     ports:
       - "5432:5432"
