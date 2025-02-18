@@ -15,7 +15,7 @@ export const databaseProviders = [
         password: process.env.DB_PASSWORD || '01051998',
         database: process.env.DB_NAME || 'task-manager',
         entities: [User, Task],
-        synchronize: true, //only for development*******
+        synchronize: false, //only for development*******
       });
 
       return dataSource.initialize();
